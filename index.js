@@ -78,7 +78,7 @@ function currentTime() {
         }
         if (value3 >= hour && value3 < hour + 1) { 
              image.setAttribute("src", "./image/gn.jpg");
-             massages.innerText="Dinner time"+ " "+value33;
+             massages.innerText="Sleeping time"+ " "+value33;
              img.innerText="Good Night"
 
         }
