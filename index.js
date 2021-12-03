@@ -35,19 +35,7 @@ function currentTime() {
 }   
 setInterval(currentTime, 1000);
   
-  
-// function makeDive() {
-//     var element =document.createElement('div');
-    
-//     element.setAttribute("class","massage")
-//     // element.innerText = "Append Child and creating new element"
-//     const existingDiv = document.getElementById("main");
-//     console.log(existingDiv);
-//     existingDiv.appendChild(element);
-//     // container.id="dynamicMsg";
-//     // container.class="massage";
-//     // document.getElementById("main").appendChild("container")
-// }
+
 function MakeDive() {
     var newDate = new Date();
     var hour = newDate.getHours();
@@ -61,6 +49,8 @@ function MakeDive() {
     var  invalue1=dropDown1.value
     var   invalue2=dropDown2.value
     var   invalue3=dropDown3.value
+
+   
 
     var value11 = dropDown1.options[dropDown1.selectedIndex].text;
     var value22 = dropDown2.options[dropDown2.selectedIndex].text;
@@ -107,6 +97,7 @@ function MakeDive() {
 
         if (value1 != hour && value2 != hour && value3 != hour) {
         image.setAttribute("src", "image/d.jpg");
+        img.innerText="Welcome"
        
         }
         if (value1 >= hour && value1 < hour + 1) { 
@@ -124,6 +115,7 @@ function MakeDive() {
              massages.innerText="Sleeping time"+ " "+value33;
              img.innerText="Good Night"
         }
+        
              
         MakeDive() 
 
