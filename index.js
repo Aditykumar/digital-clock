@@ -27,7 +27,7 @@ function currentTime() {
     document.getElementById("clockM").innerText = timeM; 
     document.getElementById("clockS").innerText = timeS; 
     document.getElementById("clockA").innerText = timeA; 
-    // let t = setTimeout(function(){ currentTime() }, 1000);
+  
 
 
 
@@ -102,17 +102,14 @@ function MakeDive() {
         }
         if (value1 >= hour && value1 < hour + 1) { 
             image.setAttribute("src", "./image/wake1.jpg");
-            massages.innerText="Wake time"+" "+value11;
             img.innerText="Wake up Now"
         }
         if (value2 >= hour && value2 < hour + 1) { 
              image.setAttribute("src", "./image/lunch.jpg");
-             massages.innerText="Lunch time"+" "+value22;
              img.innerText="Time for Lunch"
         }
         if (value3 >= hour && value3 < hour + 1) { 
              image.setAttribute("src", "./image/gn.jpg");
-             massages.innerText="Sleeping time"+ " "+value33;
              img.innerText="Good Night"
         }
         
