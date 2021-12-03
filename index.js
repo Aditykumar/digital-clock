@@ -27,39 +27,82 @@ function currentTime() {
     document.getElementById("clockM").innerText = timeM; 
     document.getElementById("clockS").innerText = timeS; 
     document.getElementById("clockA").innerText = timeA; 
-    let t = setTimeout(function(){ currentTime() }, 1000);
+    // let t = setTimeout(function(){ currentTime() }, 1000);
 
 
 
 
 }   
+setInterval(currentTime, 1000);
   
-  currentTime();
+  
+// function makeDive() {
+//     var element =document.createElement('div');
+    
+//     element.setAttribute("class","massage")
+//     // element.innerText = "Append Child and creating new element"
+//     const existingDiv = document.getElementById("main");
+//     console.log(existingDiv);
+//     existingDiv.appendChild(element);
+//     // container.id="dynamicMsg";
+//     // container.class="massage";
+//     // document.getElementById("main").appendChild("container")
+// }
+function MakeDive() {
+    var newDate = new Date();
+    var hour = newDate.getHours();
+    var massages=document.getElementById("dynamicMsg");
+    massages.setAttribute("class","massage")
+    
+    var dropDown1 = document.getElementById("wakeUpTime");
+    var dropDown2 = document.getElementById("lunchTime");
+    var dropDown3 = document.getElementById("napTime");
 
+    var  invalue1=dropDown1.value
+    var   invalue2=dropDown2.value
+    var   invalue3=dropDown3.value
 
+    var value11 = dropDown1.options[dropDown1.selectedIndex].text;
+    var value22 = dropDown2.options[dropDown2.selectedIndex].text;
+    var value33 = dropDown3.options[dropDown3.selectedIndex].text;
+
+   if (invalue1>=1&&invalue2>=1&&invalue3>=1) { 
+     
+        massages.innerText="Wakeup time is "+value11+"\n"+"Lunch time is "+value22+"\n"+"Sleeping time is "+value33;
+
+     
+    }
+    else{
+          
+        massages.innerText="Please set all time";
+    }
+  
+
+  
+}
 
   function dynamicTimeSet() {
-    let newDate = new Date();
-    let hour = newDate.getHours();
+    var newDate = new Date();
+    var hour = newDate.getHours();
     // let minute = newDate.getMinutes();
 
-    const value1 = document.getElementById("wakeUpTime").value;
-    const value2 = document.getElementById("lunchTime").value;
-    const value3 = document.getElementById("napTime").value;
+    var massages=document.getElementById("dynamicMsg");
+    var dropDown1 = document.getElementById("wakeUpTime");
+    var dropDown2 = document.getElementById("lunchTime");
+    var dropDown3 = document.getElementById("napTime");
 
-    const dropDown1 = document.getElementById("wakeUpTime");
-    const dropDown2 = document.getElementById("lunchTime");
-    const dropDown3 = document.getElementById("napTime");
-    const value11 = dropDown1.options[dropDown1.selectedIndex].text;
-    const value22 = dropDown2.options[dropDown2.selectedIndex].text;
-    const value33 = dropDown3.options[dropDown3.selectedIndex].text;
+    var value1 = dropDown1.value;
+    var value2 = dropDown2.value;
+    var value3 = dropDown3.value;
+
+   
+    var value11 = dropDown1.options[dropDown1.selectedIndex].text;
+    var value22 = dropDown2.options[dropDown2.selectedIndex].text;
+    var value33 = dropDown3.options[dropDown3.selectedIndex].text;
 
     const img=document.getElementById("dynamic-text")
-
-    
-
     const image = document.getElementById("myImageId");
-    const massages=document.getElementById("dynamicMsg");
+  
 
 
         if (value1 != hour && value2 != hour && value3 != hour) {
@@ -80,8 +123,8 @@ function currentTime() {
              image.setAttribute("src", "./image/gn.jpg");
              massages.innerText="Sleeping time"+ " "+value33;
              img.innerText="Good Night"
-
         }
+             
+        MakeDive() 
 
   }
-  dynamicTimeSet()

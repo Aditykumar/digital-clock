@@ -11,7 +11,7 @@ body{
     background: #3D087B;
     height: 800px;
     width: 1000px;
-    margin-top: 75px;
+    margin-top: 30px;
     
    
 }
@@ -115,10 +115,10 @@ body{
     flex-direction: wrap;
     width: 100%;
     /* background-color: brown; */
-    height: 600px;
+    height: 430px;
 }
 .contentBox{
-    padding: 13px 20px;
+    padding: 5px 20px;
     border-radius: 20px;
     background: #FFFFFF;
     /* float: left; */
@@ -126,6 +126,7 @@ body{
     height: 255px;
 }
 .imageBox{
+  
     padding: 2px;
     border-radius: 20px;
     background: #FFFFFF;
@@ -134,11 +135,11 @@ body{
     height: 400px;
 }
 .imageBox span {
-    position: absolute;
-    top: 204px;
+    position: relative;
+    
     color: gray;
     font-size: 22px;
-    right: 300px;
+    left: 168px;
     font-weight: 600;
     font-family: cursive;
 }
@@ -170,12 +171,16 @@ body{
     margin-left: 24px;
 }
 .massage{
+    position:absolute;
+    top: 463px;
+    
+    left: 156px;
     width: 467px;
-    height: 37px;
+    height: 67px;
     background: rgb(255, 255, 255,0.23);
-    margin: 25px -21px 0px -21px;
-    padding: 11px;
-    font-size: 25px;
+    margin: 19px -21px 0px -21px;
+    padding: 4px 10px 4px 10px;
+    font-size: 16px;
     color: white;
     font-weight: 900;
     border: 1px solid #EDEDED;
@@ -184,13 +189,13 @@ body{
 }
 .btn{
     width: 214px;
-    padding: 15px;
+    padding: 10px;
     color: white;
     border: none;
     border-radius: 5px;
     font-size: 20px;
     background-image: linear-gradient(145deg,#6E54EC , #FC5EFF);
-    margin-top: 12px ;
+    margin-top: 15px ;
     margin-left: -19px;
 
 }
