@@ -64,7 +64,7 @@ function MakeDive() {
     }
     else{
           
-        massages.innerText="Please set all time";
+        massages.innerText="Please select all time";
     }
   
 
