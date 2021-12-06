@@ -94,7 +94,7 @@ function MakeDive() {
         if (value1 != hour && value2 != hour && value3 != hour) {
         image.setAttribute("src", "image/d.jpg");
         img.innerText="WELCOME"
-       
+    
         }
         if (value3 >= hour && value3 < hour + 1) { 
             image.setAttribute("src", "./image/gn.jpg");
